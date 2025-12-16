@@ -1,0 +1,377 @@
+/* --- General Styles --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: #004080; /* Stanford Blue */
+    font-weight: 600;
+}
+
+h2 {
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+a {
+    color: #005a9c; /* UNSW Blue */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- Header --- */
+header {
+    background: #ffffff;
+    padding: 1rem 0;
+    border-bottom: 1px solid #dee2e6;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+header nav a {
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: #004080;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h2 {
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    border-bottom: none;
+}
+
+/* --- Main Content --- */
+main {
+    padding: 40px 0;
+}
+
+section {
+    margin-bottom: 40px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+ul, ol {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.button {
+    display: inline-block;
+    background: #005a9c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #004080;
+    text-decoration: none;
+}
+
+.view-more-container {
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+/* --- News Section (Homepage) --- */
+.news-layout-container {
+    display: flex;
+    gap: 30px; /* 两栏之间的间距 */
+    align-items: flex-start;
+}
+
+.news-list-column {
+    flex: 1.5; /* 新闻列表占据更多空间 */
+    min-width: 0;
+}
+
+.news-slider-column {
+    flex: 1;
+    min-width: 0;
+}
+
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.news-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+.news-list li:last-child {
+    border-bottom: none;
+}
+.news-list a {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.news-list span {
+    color: #6c757d;
+    font-size: 0.9em;
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+/* --- Image Slider Styles --- */
+.image-slider {
+    position: relative;
+    width: 100%;
+    padding-top: 66.66%; /* 3:2 aspect ratio */
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #e9ecef;
+}
+
+.slider-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out; /* 平滑的淡入淡出效果 */
+    visibility: hidden;
+}
+
+.slider-image.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* --- Researcher Cards --- */
+.researcher-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+    background: #fff;
+}
+
+.card:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card.placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    min-height: 300px;
+}
+
+
+/* --- Profile Page --- */
+.profile-container {
+    display: flex;
+    gap: 30px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.profile-sidebar {
+    flex: 0 0 280px;
+    text-align: center;
+}
+
+.profile-sidebar img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.profile-sidebar p {
+    text-align: left;
+    margin: 10px 0;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.profile-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.profile-content h3 {
+    border-bottom: 2px solid #004080;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.profile-content ul, .profile-content ol {
+    margin-bottom: 25px;
+}
+
+
+/* --- News Page --- */
+.news-container .news-item {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e9ecef;
+}
+.news-container .news-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.news-item h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+.news-item h3 a:hover {
+    color: #004080;
+}
+.news-meta {
+    font-size: 0.9em;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+
+/* --- Admin Page --- */
+.admin-login {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* --- Footer --- */
+footer {
+    background: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .news-layout-container {
+        flex-direction: column; /* 在小屏幕上，两栏垂直堆叠 */
+    }
+    
+    header .container {
+        flex-direction: column;
+    }
+    
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    .profile-container {
+        flex-direction: column;
+    }
+
+    .profile-sidebar {
+        flex: 0 0 auto; /* 恢复默认的flex行为 */
+        width: 100%;
+        max-width: 280px; /* 限制最大宽度 */
+        margin: 0 auto;
+    }
+}

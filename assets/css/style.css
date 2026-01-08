@@ -103,6 +103,10 @@ section {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+section:first-of-type {
+    margin-top: 20px;
+}
+
 ul, ol {
     padding-left: 20px;
 }
